@@ -9,7 +9,7 @@ const MainPage = () => {
   const handleInputChange = (e) => {
     setCharacterName(e.target.value);
   };
-
+//conectividad con el endpoint de la api
   const handleSearch = async () => {
     try {
       const response = await axios.get(`https://dragonball-api.com/api/characters?name=${characterName}`);
@@ -18,7 +18,7 @@ const MainPage = () => {
       console.error('Error fetching character data:', error);
     }
   };
-
+//Aspecto visual de la página + boton de conexion con la api
   return (
     <div className="main-page">
       <h1>Dragon Ball API Character Searcher</h1>
